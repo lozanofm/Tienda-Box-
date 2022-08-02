@@ -1,0 +1,32 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif; /*toda la pagina utilizará esta tipografía*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.fondoApp{/*fondo de seccion app*/
+background-image: url(./imagenes/fondo.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.turnos{/*fondo de seccion turnos*/
+    background-image: url(./imagenes/fondoturnos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tituloAPP{/*titulos de app y turnos*/
+    color: yellow;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+.colorForm{ /*color de tiutulos de usuario/password*/
+    color: white;
+    margin-left: 5rem;
+}
+.sesion{/*boton de inicio sesion, o reservar turnos*/
+    margin-left: 5rem;
+
+}
