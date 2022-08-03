@@ -1,9 +1,10 @@
 
 
-// //usuario ya resgitrado debe ingresar sus credenciales para ingresar a la APP de compras
+// //usuario ya regitrado debe ingresar sus credenciales para ingresar a la APP de compras
 function inicio(){
     let clave=1234;
     let usuario="fernando";
+    //una vez que acepto el ingreso le muestra al usuario los productos disponibles a continuacion
     const listaBox=["Chalecos","Calleras","Muñqueras","Cinturones","Magnesio",];
         
 
@@ -78,9 +79,13 @@ while(articulos!="s" && articulos!="S"){
 }
 alert("CANTIDAD DE PRODUCTOS SELECCIONADOS: "+cantidad);
 alert("Total a pagar $"+precio);
+//MOSTRAMOS LAS REMERAS QUE LA TIENDA TIENE EN PROMOCION
+alert("Antes de retirarse, lo invitamos a mirar nuestras remeras");
+encontrado=prompt("Ingrese la remera que desea buscar");
 
 }
 
+//MOSTRAMOS EL DETALLE DE LOS PRODUCTOS
 //Muestra el detalle de chalecos
 
 class Chalec{
@@ -173,7 +178,51 @@ class Magnesio{
 const magnesio1=new Magnesio("Magnesio","blanco","S-3","$ 2000");
 const magnesio2=new Magnesio("Magnesio","blanco","K-2","$ 2000");
 
+const remeras=[
+    {
+        codigo:"9345123",
+        modelo:"Nobull",
+        precio:230
+    },
+    {
+        codigo:"7345124",
+        modelo:"Reebok",
+        precio:300
+    },
+    {
+        codigo:"3345125",
+        modelo:"Nike",
+        precio:400
+    },
+    {
+        codigo:"1345126",
+        modelo:"Adidas",
+        precio:420
+    },
+];
 
+
+// Muestro los modelos de remeras disponibles
+remeras.forEach((remera)=>console.log(remera.modelo));
+
+
+//Usuario busca la remera Adidas
+let encontrado=remeras.find((remera)=>remera.modelo=="Adidas");
+console.log(encontrado);
+
+
+//Si Adidas esta disponible o no se muestra el cartel a continuacion
+if(encontrado != undefined){
+    console.log("La remera se encuentra disponible");
+    console.log(encontrado);
+}else{
+    console.log("No esta disponible!");
+}
+
+
+//filtro las remeras con precio menor a 300
+const oferta=remeras.filter((remera)=>remera.precio<300);
+console.log(oferta);
 
 
 
